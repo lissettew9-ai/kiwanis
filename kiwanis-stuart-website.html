@@ -1,0 +1,1237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiwanis Club of Stuart | Serving Children Since 1938</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #003876;
+            --secondary-blue: #0051A8;
+            --accent-red: #C8102E;
+            --accent-gold: #D4AF37;
+            --soft-gray: #F8F9FA;
+            --light-gray: #E8EBF0;
+            --medium-gray: #6C757D;
+            --dark-text: #212529;
+            --white: #FFFFFF;
+            --border-light: #DEE2E6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--dark-text);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        /* Header & Navigation */
+        .header {
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 3px solid var(--primary-blue);
+        }
+
+        .header-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1.25rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+        }
+
+        .logo {
+            width: 65px;
+            height: 65px;
+            background: var(--primary-blue);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Merriweather', serif;
+            font-size: 2rem;
+            font-weight: 900;
+            color: var(--white);
+            letter-spacing: -1px;
+        }
+
+        .logo-text {
+            font-family: 'Merriweather', serif;
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            line-height: 1.3;
+        }
+
+        .logo-text small {
+            display: block;
+            font-size: 0.7rem;
+            font-weight: 400;
+            color: var(--medium-gray);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2.5rem;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--dark-text);
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        nav a:hover {
+            color: var(--primary-blue);
+        }
+
+        .btn-donate {
+            background: var(--accent-red);
+            color: var(--white);
+            padding: 0.75rem 2rem;
+            border-radius: 4px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-donate:hover {
+            background: #A00D24;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(200, 16, 46, 0.3);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+            color: var(--white);
+            padding: 6rem 3rem 5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 40%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.03) 100%);
+        }
+
+        .hero-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: var(--white);
+            padding: 0.65rem 1.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .award-icon {
+            width: 24px;
+            height: 24px;
+            background: var(--accent-gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+
+        .hero h1 {
+            font-family: 'Merriweather', serif;
+            font-size: 3.75rem;
+            font-weight: 900;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            font-weight: 300;
+            margin-bottom: 1.5rem;
+            opacity: 0.95;
+            font-family: 'Merriweather', serif;
+            font-style: italic;
+        }
+
+        .hero-description {
+            font-size: 1.15rem;
+            max-width: 750px;
+            line-height: 1.8;
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1.25rem;
+        }
+
+        .btn {
+            padding: 1rem 2.5rem;
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-primary {
+            background: var(--accent-red);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background: #A00D24;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(200, 16, 46, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+
+        .btn-secondary:hover {
+            background: var(--white);
+            color: var(--primary-blue);
+        }
+
+        /* About Section */
+        .about {
+            padding: 6rem 3rem;
+            background: var(--white);
+        }
+
+        .about-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+        }
+
+        .about-content h2 {
+            font-family: 'Merriweather', serif;
+            font-size: 2.75rem;
+            color: var(--primary-blue);
+            margin-bottom: 1.5rem;
+            line-height: 1.3;
+            font-weight: 700;
+        }
+
+        .about-content p {
+            font-size: 1.05rem;
+            color: var(--dark-text);
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .stat-card {
+            background: var(--soft-gray);
+            padding: 2.5rem 2rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-blue);
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            border-left-color: var(--accent-red);
+        }
+
+        .stat-number {
+            font-family: 'Merriweather', serif;
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: var(--primary-blue);
+            margin-bottom: 0.5rem;
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            color: var(--medium-gray);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .about-image {
+            position: relative;
+            height: 550px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
+            border: 1px solid var(--border-light);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Programs Section */
+        .programs {
+            padding: 6rem 3rem;
+            background: var(--soft-gray);
+        }
+
+        .programs-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4.5rem;
+        }
+
+        .section-header h2 {
+            font-family: 'Merriweather', serif;
+            font-size: 3rem;
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .section-header p {
+            font-size: 1.15rem;
+            color: var(--medium-gray);
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+        }
+
+        .program-card {
+            background: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            border: 1px solid var(--border-light);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .program-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+            border-color: var(--primary-blue);
+        }
+
+        .program-icon {
+            width: 100%;
+            height: 180px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .program-icon svg {
+            width: 80px;
+            height: 80px;
+            fill: var(--white);
+            opacity: 0.9;
+            z-index: 1;
+            position: relative;
+        }
+
+        .program-icon::before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+        }
+
+        .program-content {
+            padding: 2rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .program-content h3 {
+            font-family: 'Merriweather', serif;
+            font-size: 1.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .program-content p {
+            font-size: 0.95rem;
+            color: var(--dark-text);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            flex: 1;
+        }
+
+        .program-link {
+            color: var(--accent-red);
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: gap 0.3s ease;
+        }
+
+        .program-link:hover {
+            gap: 0.75rem;
+        }
+
+        .program-link::after {
+            content: '→';
+            font-size: 1.2rem;
+        }
+
+        /* News Section */
+        .news {
+            padding: 6rem 3rem;
+            background: var(--white);
+        }
+
+        .news-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+        }
+
+        .news-card {
+            background: var(--soft-gray);
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--border-light);
+            transition: all 0.4s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .news-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+            border-color: var(--primary-blue);
+        }
+
+        .news-image {
+            width: 100%;
+            height: 280px;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .news-content {
+            padding: 2rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            background: var(--white);
+        }
+
+        .news-content h3 {
+            font-family: 'Merriweather', serif;
+            font-size: 1.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .news-content p {
+            font-size: 0.95rem;
+            color: var(--dark-text);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            flex: 1;
+        }
+
+        /* CTA Section */
+        .cta {
+            padding: 5rem 3rem;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 60%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+        }
+
+        .cta-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta h2 {
+            font-family: 'Merriweather', serif;
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.3;
+            font-weight: 700;
+        }
+
+        .cta p {
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.95;
+            line-height: 1.8;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.25rem;
+            justify-content: center;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 6rem 3rem;
+            background: var(--soft-gray);
+        }
+
+        .contact-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+        }
+
+        .contact-info h2 {
+            font-family: 'Merriweather', serif;
+            font-size: 2.75rem;
+            color: var(--primary-blue);
+            margin-bottom: 2rem;
+            font-weight: 700;
+        }
+
+        .info-item {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+            align-items: flex-start;
+        }
+
+        .info-icon {
+            width: 55px;
+            height: 55px;
+            background: var(--primary-blue);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .info-icon svg {
+            width: 28px;
+            height: 28px;
+            fill: var(--white);
+        }
+
+        .info-content h3 {
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 0.75rem;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .info-content p {
+            color: var(--dark-text);
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+
+        .info-content a {
+            color: var(--accent-red);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .info-content a:hover {
+            text-decoration: underline;
+        }
+
+        .meeting-card {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-light);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .meeting-card h3 {
+            font-family: 'Merriweather', serif;
+            font-size: 1.75rem;
+            color: var(--primary-blue);
+            margin-bottom: 2rem;
+            font-weight: 700;
+        }
+
+        .meeting-detail {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.25rem;
+            font-size: 1rem;
+            padding-bottom: 1.25rem;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .meeting-detail:last-of-type {
+            border-bottom: none;
+        }
+
+        .meeting-detail strong {
+            color: var(--primary-blue);
+            font-weight: 700;
+            min-width: 100px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-size: 0.85rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-text);
+            color: var(--white);
+            padding: 4rem 3rem 2rem;
+        }
+
+        .footer-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-about h3 {
+            font-family: 'Merriweather', serif;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .footer-about p {
+            opacity: 0.8;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .footer-section h4 {
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-size: 0.9rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .footer-section a:hover {
+            color: var(--white);
+            padding-left: 5px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-link {
+            width: 42px;
+            height: 42px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: var(--white);
+            font-weight: 700;
+        }
+
+        .social-link:hover {
+            background: var(--accent-red);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+            text-align: center;
+            opacity: 0.7;
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .hero h1 {
+                font-size: 3rem;
+            }
+
+            .about-container,
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .programs-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-container {
+                padding: 1rem 1.5rem;
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            .hero {
+                padding: 4rem 1.5rem 3rem;
+            }
+
+            .hero h1 {
+                font-size: 2.25rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .programs-grid,
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo-section">
+                <div class="logo">K</div>
+                <div class="logo-text">
+                    Kiwanis Club of Stuart
+                    <small>Florida, Inc.</small>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#programs">Programs</a></li>
+                    <li><a href="#news">News</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#donate" class="btn-donate">Donate</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-badge">
+                <div class="award-icon">★</div>
+                2024 Silver International Kiwanis Signature Project
+            </div>
+            <h1>Serving Martin County's<br>Children Since 1938</h1>
+            <p class="hero-subtitle">Kiwanis Park at Woodlawn</p>
+            <p class="hero-description">
+                The Kiwanis Club of Stuart has been serving the children of Martin County since 1938. We are generous with our time, creative with our ideas, and passionate about making a difference in our community.
+            </p>
+            <div class="hero-buttons">
+                <a href="#programs" class="btn btn-primary">Explore Our Programs</a>
+                <a href="#contact" class="btn btn-secondary">Join Our Club</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="about-container">
+            <div class="about-content">
+                <h2>Making a Difference, One Child at a Time</h2>
+                <p>
+                    We bring together leaders who dedicate their time and talent to make a lasting impact in their community. From the first public pool to soccer fields, and now the award-winning Kiwanis Children's Park at Woodlawn, we're dedicated to improving the lives of children every single day.
+                </p>
+                <p>
+                    Whether raising funds or volunteering, providing our community with much-needed assistance, we work with dedication and purpose. Our members are passionate, creative, and committed to making Martin County a better place for all children.
+                </p>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">86</div>
+                        <div class="stat-label">Years of Service</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">60+</div>
+                        <div class="stat-label">Years Clothing Children</div>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image">
+                <img src="data:image/svg+xml,%3Csvg width='800' height='600' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='800' height='600' fill='%23003876'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='20' fill='white' text-anchor='middle' dominant-baseline='middle'%3EKiwanis Park at Woodlawn%3C/text%3E%3C/svg%3E" alt="Kiwanis Park at Woodlawn">
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section id="programs" class="programs">
+        <div class="programs-container">
+            <div class="section-header">
+                <h2>Our Impact Programs</h2>
+                <p>Dedicated initiatives that transform lives and strengthen our community</p>
+            </div>
+            <div class="programs-grid">
+                <div class="program-card">
+                    <div class="program-icon">
+                        <svg viewBox="0 0 24 24"><path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z"/></svg>
+                    </div>
+                    <div class="program-content">
+                        <h3>Kiwanis Reads</h3>
+                        <p>
+                            Promoting literacy throughout our community with Little Free Libraries in Kiwanis Park, free books for children through literacy programs at MC Fair Reading, Pancakes & Reading, and Super Saturday events.
+                        </p>
+                        <a href="#donate" class="program-link">Support This Program</a>
+                    </div>
+                </div>
+                <div class="program-card">
+                    <div class="program-icon">
+                        <svg viewBox="0 0 24 24"><path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z"/></svg>
+                    </div>
+                    <div class="program-content">
+                        <h3>Saturday with Santa</h3>
+                        <p>
+                            For over 60 years, we've clothed underprivileged children in Martin County. A donation of $75 provides a complete outfit and shoes to a child in need, bringing warmth during the holiday season.
+                        </p>
+                        <a href="#donate" class="program-link">Clothe a Child</a>
+                    </div>
+                </div>
+                <div class="program-card">
+                    <div class="program-icon">
+                        <svg viewBox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>
+                    </div>
+                    <div class="program-content">
+                        <h3>Robert Whitty Agricultural Scholarship</h3>
+                        <p>
+                            Supporting the next generation of agricultural leaders with scholarships for students pursuing careers in agriculture, honoring the legacy of Robert Whitty and his dedication to the community.
+                        </p>
+                        <a href="#contact" class="program-link">Learn More</a>
+                    </div>
+                </div>
+                <div class="program-card">
+                    <div class="program-icon">
+                        <svg viewBox="0 0 24 24"><path d="M7 2v11h3v9l7-12h-4l4-8z"/></svg>
+                    </div>
+                    <div class="program-content">
+                        <h3>Martin County Fair</h3>
+                        <p>
+                            Join us at our Beer Booth and Reading Booth at the Martin County Fair. Support our fundraising efforts while enjoying the fair and promoting literacy in our community.
+                        </p>
+                        <a href="#contact" class="program-link">Get Involved</a>
+                    </div>
+                </div>
+                <div class="program-card">
+                    <div class="program-icon">
+                        <svg viewBox="0 0 24 24"><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
+                    </div>
+                    <div class="program-content">
+                        <h3>Pancakes & Reading</h3>
+                        <p>
+                            Our signature event combining delicious pancake breakfasts with reading activities in Kiwanis Park. A family-friendly way to promote literacy and community connection.
+                        </p>
+                        <a href="#contact" class="program-link">Join Us</a>
+                    </div>
+                </div>
+                <div class="program-card">
+                    <div class="program-icon">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                    </div>
+                    <div class="program-content">
+                        <h3>Super Saturday</h3>
+                        <p>
+                            Monthly events at Kiwanis Park bringing families together for activities, reading programs, and community building. Creating memories and fostering a love of learning.
+                        </p>
+                        <a href="#contact" class="program-link">Attend Event</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section id="news" class="news">
+        <div class="news-container">
+            <div class="section-header">
+                <h2>News & Updates</h2>
+                <p>Stay connected with the latest from Kiwanis Club of Stuart</p>
+            </div>
+            <div class="news-grid">
+                <div class="news-card">
+                    <div class="news-image"></div>
+                    <div class="news-content">
+                        <h3>Robert Whitty Agricultural Scholarship</h3>
+                        <p>
+                            We're proud to announce the continuation of the Robert Whitty Agricultural Scholarship, supporting students pursuing careers in agriculture and honoring the legacy of a dedicated community member.
+                        </p>
+                        <a href="#contact" class="program-link">Read More</a>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <div class="news-image"></div>
+                    <div class="news-content">
+                        <h3>Kiwanis Reads Initiative</h3>
+                        <p>
+                            Our literacy program continues to grow. With Little Free Libraries throughout the community and thousands of books distributed, we're making reading accessible to all children in Martin County.
+                        </p>
+                        <a href="#programs" class="program-link">Learn More</a>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <div class="news-image"></div>
+                    <div class="news-content">
+                        <h3>Support Kiwanis Park at Woodlawn</h3>
+                        <p>
+                            Help us maintain and improve our award-winning 2024 Silver International Kiwanis Signature Project. Your donations support upkeep, repairs, and new additions to the park.
+                        </p>
+                        <a href="#donate" class="program-link">Donate Now</a>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <div class="news-image"></div>
+                    <div class="news-content">
+                        <h3>Supporting Local First Responders</h3>
+                        <p>
+                            The Kiwanis Club of Stuart stands with our local first responders. Learn about our ongoing support initiatives for the brave individuals who keep our community safe.
+                        </p>
+                        <a href="#contact" class="program-link">Get Involved</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="donate" class="cta">
+        <div class="cta-container">
+            <h2>Make an Impact Today</h2>
+            <p>
+                When you give, you support the work we do in your community and around the world. We use 100% of our funding for program expenses, ensuring every dollar makes a real difference in a child's life.
+            </p>
+            <div class="cta-buttons">
+                <a href="https://www.kiwanisclubofstuart.org/page/donate" class="btn btn-primary">Donate Now</a>
+                <a href="#contact" class="btn btn-secondary">Become a Member</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Get in Touch</h2>
+                <p style="margin-bottom: 2.5rem; color: var(--medium-gray); font-size: 1.05rem;">
+                    Interested in making an impact? We'd love to hear from you.
+                </p>
+                <div class="info-item">
+                    <div class="info-icon">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                    </div>
+                    <div class="info-content">
+                        <h3>Mailing Address</h3>
+                        <p>
+                            PO Box 532<br>
+                            Stuart, FL 34995<br>
+                            United States
+                        </p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon">
+                        <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                    </div>
+                    <div class="info-content">
+                        <h3>Contact Us</h3>
+                        <p>
+                            Visit our <a href="https://www.kiwanisclubofstuart.org/singleemail/contactus">contact form</a> to send us a message
+                        </p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon">
+                        <svg viewBox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
+                    </div>
+                    <div class="info-content">
+                        <h3>Connect Online</h3>
+                        <p>
+                            Follow us on <a href="https://www.facebook.com/KiwanisClubofStuart">Facebook</a><br>
+                            Shop at our <a href="https://kiwanisclubofstuart.square.site/">online store</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="meeting-card">
+                <h3>Join Us at Our Next Meeting</h3>
+                <div class="meeting-detail">
+                    <strong>Schedule:</strong>
+                    <span>Tuesdays at 12:15 PM</span>
+                </div>
+                <div class="meeting-detail">
+                    <strong>Frequency:</strong>
+                    <span>First and third Tuesday of each month</span>
+                </div>
+                <div class="meeting-detail">
+                    <strong>Venue:</strong>
+                    <span>Manero's Restaurant</span>
+                </div>
+                <div class="meeting-detail">
+                    <strong>Address:</strong>
+                    <span>
+                        2851 SW High Meadows Avenue<br>
+                        Palm City, FL 34990
+                    </span>
+                </div>
+                <p style="margin-top: 2rem; padding-top: 2rem; border-top: 2px solid var(--light-gray); line-height: 1.8;">
+                    Our meetings feature engaging speakers on topics of interest to our members and community. New member mentorship programs are available. Feel free to join us as our guest.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <h3>Kiwanis Club of Stuart</h3>
+                <p>
+                    Members of the Kiwanis Club of Stuart are dedicated individuals who share a passion for community service and making a difference in the lives of children throughout Martin County.
+                </p>
+                <p style="font-size: 0.85rem; opacity: 0.7; line-height: 1.6;">
+                    The Kiwanis Club of Stuart, Florida Foundation, Inc. is a 501(c)(3) nonprofit corporation.<br>
+                    Registration Number: CH5176<br>
+                    For more information, visit <a href="http://www.floridaconsumerhelp.com/" style="color: rgba(255,255,255,0.7);">FloridaConsumerHelp.com</a>
+                </p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/KiwanisClubofStuart" class="social-link">f</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#programs">Our Programs</a></li>
+                    <li><a href="#news">News & Updates</a></li>
+                    <li><a href="https://www.kiwanisclubofstuart.org/clubexecutives">Club Executives</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Get Involved</h4>
+                <ul>
+                    <li><a href="#contact">Become a Member</a></li>
+                    <li><a href="#donate">Make a Donation</a></li>
+                    <li><a href="https://www.kiwanisclubofstuart.org/events/calendar">Event Calendar</a></li>
+                    <li><a href="https://kiwanisclubofstuart.square.site/">Online Store</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="https://www.kiwanisclubofstuart.org/page/kiwanis-club-of-stuart-photos">Photo Albums</a></li>
+                    <li><a href="https://portal.clubrunner.ca/101846/User/Login">Member Login</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Kiwanis Club of Stuart, Florida, Inc. All rights reserved. Serving Martin County since 1938.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Enhanced header scroll effect
+        let lastScroll = 0;
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 100) {
+                header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.05)';
+            }
+            
+            lastScroll = currentScroll;
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Apply fade-in effect to cards
+        document.querySelectorAll('.program-card, .news-card, .stat-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
